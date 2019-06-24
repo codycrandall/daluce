@@ -1,10 +1,11 @@
 import React from 'react'
 import { Switch, Route, } from 'react-router-dom'
+import Header from './components/Header';
 
-const Router = (props) => (
-        <Switch>
-            <Route exact={true} path='/' render={() =><div>hello world</div>} />
-        </Switch>
+const Router = () => (
+    <Switch>
+        <Route path='/' render={() => <Header />} />
+    </Switch>
 )
 
 export default Router;

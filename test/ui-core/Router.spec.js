@@ -4,13 +4,21 @@ import { Switch } from 'react-router-dom';
 import Router from '../../src/ui-core/Router';
 
 describe('Router', () => {
-    it('should include a switch with routes', () => {
-        const wrapper = shallow(<Router />);
-        const routerSwitch = wrapper.find(Switch);
-        const mainPage = routerSwitch.childAt(0);
-        expect(mainPage.prop('exact')).eql(true);
+    let wrapper, routerSwitch;
 
-        expect(mainPage.prop('path')).eql('/');
-        expect(mainPage.prop('render')).to.be.a('Function');
+    beforeEach(() => {
+        wrapper = shallow(<Router />);
+        routerSwitch = wrapper.find(Switch);
+    });
+
+    it('should include a switch', () => {
+        expect(routerSwitch).lengthOf(1)
+    });
+
+    it('should include a header', () => {
+        const header = routerSwitch.childAt(0);
+
+        expect(header.prop('path')).eql('/');
+        expect(header.prop('render')).to.be.a('Function');
     });
 });
