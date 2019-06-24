@@ -2,23 +2,24 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Switch } from 'react-router-dom';
 import Router from '../../src/ui-core/Router';
+import Header from '../../src/ui-core/components/Header';
+import Landing from '../../src/ui-core/components/Landing';
 
 describe('Router', () => {
-    let wrapper, routerSwitch;
+    let wrapper, router;
 
     beforeEach(() => {
         wrapper = shallow(<Router />);
-        routerSwitch = wrapper.find(Switch);
-    });
-
-    it('should include a switch', () => {
-        expect(routerSwitch).lengthOf(1)
     });
 
     it('should include a header', () => {
-        const header = routerSwitch.childAt(0);
-
-        expect(header.prop('path')).eql('/');
-        expect(header.prop('render')).to.be.a('Function');
+        expect(wrapper.find(Header)).lengthOf(1);
     });
+
+    it('should include a landing page', () => {
+        const landing = wrapper.childAt(1);
+
+        expect(landing.prop('path')).eql('/');
+        expect(landing.prop('component')).eql(Landing);
+    })
 });

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Switch, Route, } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Header from './components/Header';
+import Landing from './components/Landing';
 
 const Router = () => (
-    <Switch>
-        <Route path='/' render={() => <Header />} />
-    </Switch>
+    <div>
+        <Header />
+        <Route exact={true} path='/' component={Landing} />
+    </div>
 )
 
 export default Router;

@@ -19,6 +19,7 @@
         "hapi": "^18.1.0",
         "node-sass": "^4.12.0",
         "react": "^16.8.6",
+        "react-background-slideshow": "^1.0.4",
         "react-dom": "^16.8.6",
         "react-hot-loader": "^4.11.0",
         "react-router-dom": "^5.0.1"
@@ -42,8 +43,10 @@
         "eslint": "^5.16.0",
         "eslint-plugin-react": "^7.13.0",
         "eslint-plugin-react-hooks": "^1.6.0",
+        "file-loader": "^4.0.0",
         "html-webpack-plugin": "^3.2.0",
         "ignore-styles": "^5.0.1",
+        "image-webpack-loader": "^5.0.0",
         "jsdom": "^13.2.0",
         "mocha": "^5.2.0",
         "prop-types": "^15.7.2",
