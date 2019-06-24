@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Switch } from 'react-router-dom';
+
 import Router from '../../src/ui-core/Router';
 import Header from '../../src/ui-core/components/Header';
 import Landing from '../../src/ui-core/components/Landing';
