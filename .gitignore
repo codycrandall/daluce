@@ -1,0 +1,6 @@
+coverage
+dist
+.env
+logs
+node_modules
+.npm
